@@ -1,0 +1,308 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:sans-serif;
+  box-sizing:border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #000;
+  color: #fff;
+  background-image: linear-gradient(62deg,#3a3d40 0%,#181719 100%);
+}
+#header{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(62deg,#3a3d40 0%,#181719 100%);
+  background-size: cover;
+  background-position: center;
+ 
+}
+.container{
+  padding: 10px 10px;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo{
+  width: 350px;
+  margin: 40px 0px 0px -15px;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 20px 30px;
+}
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
+}
+nav ul li a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #FF004F;
+  position: absolute;
+  left: 0 ;
+  bottom: -6px;
+  transition: 0.3s; 
+}
+.jurusan-1{
+  color: #FF004F;
+}
+nav ul li a:hover::after{
+  width: 100%;
+}
+.header-text{
+  margin: 5% 4%;
+  font-size: 20px;
+}
+.header-text h1{
+  font-size: 60px;
+  margin-top: 20px;
+}
+.header-text h1 span{
+  color: #FF004F;
+} 
+/* About */
+#about{
+  margin-top: 20px;
+  padding: 5px;
+  color: #ababaa;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-me{
+  text-align: justify;
+}
+.about-col-1{
+  flex-basis: 25%;
+}
+.about-col-1 img{
+  width: 300px;
+  border-radius: 15px;
+  margin-left: 50px;
+}
+.about-col-2{
+  flex-basis: 75%;
+}
+.sub-title{
+  font-size: 45px;
+  font-weight: 600;
+  color: #fff;
+  padding: 2px;
+}
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links{
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.link-sertif{
+  text-decoration: none;
+  color: #ff0051c8;
+}
+.link-sertif:hover{
+  color: aquamarine;
+}
+.link-sertif:active{
+  color: red;
+}
+.tab-links::after{
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #FF004F;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+.tab-links.active-link::after{
+  width: 100%;
+}
+.tab-contents ul li{
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span{
+  color:#ff0051c8;
+  font-size: 20px;
+}
+
+.tab-contents{
+  display: none;
+}
+.tab-contents.active-tab{
+  display: block;
+}
+
+/* Contact */
+#contact{
+  padding: 55px;
+}
+.contact-left{
+  flex-basis:35%;
+}
+.contact-right{
+  flex-basis: 65%;
+  
+}
+.contact-left p{
+  margin-top: 30px;
+}
+.contact-left p i{
+  color: #FF004F;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.social-icons{
+  margin-top: 30px;
+}
+.social-icons a{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababaa;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+.contact-2{
+  font-size: 13px;
+}
+.social-icons a:hover{
+  color:#FF004F;
+  transform: translateY(-7px);
+}
+.copyright{
+  width: 100%;
+  text-align: center;
+  padding: 25px;
+  background-color: #ababaa;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+/* CSS for Small Screen */
+
+nav .fas{
+  display: none;
+}
+
+@media only screen and (max-width : 600px){
+  #header{
+    background-image: linear-gradient(62deg,#3a3d40 0%,#181719 100%);
+  }
+  .logo{
+    width: 300px;
+    margin: 10px 0px 0px 30px;
+  }
+  nav .fas{
+    display: block;
+    font-size: 20px;
+  }
+  .header-text{
+    margin: 100px 0px 0px 50px;
+  }
+  .header-text h1{
+    font-size: 30px;
+  }
+  .job{
+    font-size: 13px;
+  }
+  .jurusan{
+    font-size: 15px;
+  }
+  .jurusan-1{
+    font-size: 16px;
+  }
+  nav ul{
+    background-image: linear-gradient(62deg,#3a3d40 0%,#181719 100%);
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 20px;
+    padding-left: 30px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 25px;
+  }
+  #menu1{
+    position:fixed;
+    top: 25px;
+    left: 25px;
+  }
+  nav ul .fas{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+  .sub-title{
+    text-align: center;
+    font-size: 35px;
+  }
+  .about{
+    margin: 10px;
+  }
+  .about-col-1,.about-col-2{
+    flex-basis: 100%;
+  }
+  .about-col-1{
+    margin-bottom: 10px;
+  }
+  .about-me{
+    padding: 10px;
+    font-size: 15px;
+    text-align: justify;
+    text-indent: 43px;
+  }
+  
+  .tab-links{
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .contact-left{
+    flex-basis: 100%;
+  }
+  .copyright{
+    font-size: 14px;
+  }
+  .about-col-1 img{
+    width: 200px;
+    margin-left: 75px;
+  }
+  .social-icons{
+    margin-left: 30px;
+  }
+  .tab-links{
+    font-size: 19px;
+  }
+  .tab-contents{
+    font-size: smaller;
+  }
+  .about{
+    margin-left: -1000px;
+  }
+}
